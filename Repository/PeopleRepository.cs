@@ -2,7 +2,7 @@ using ApiDotNetCore.Model;
 using MySqlConnector;
 namespace PeopleAPI.Repository
 {
-    public class PeopleRepository
+    public class PeopleRepository : IPeopleRepository
     {
           //Variavel string conexão BD
         private readonly string _connectionString;

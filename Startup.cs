@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using PeopleAPI.Repository;
 
 namespace PeopleAPI
 {
@@ -26,6 +28,12 @@ namespace PeopleAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            //Passando a string de conexão para classe PeopleRepository
+            services.AddScoped<IPeopleRepository>(factory => {
+            return new PeopleRepository(
+        Configuration.GetConnectionString("MySqlDbConnection")
+        );
+     });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

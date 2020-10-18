@@ -29,11 +29,11 @@ Após instalar o SDK e o MariaDB, baixe a [API](https://github.com/AllanBelo/API
 
 altere o *userid* e *password* do  banco de dados do arquivo appsettings.json:
 
-```
-​```javascript 
+
+```javascript 
 *"ConnectionStrings"*:{*"MySqlDbConnection"*: "server=127.0.0.1;database=data_base; userid=**Seu_usuario**; password=**Sua_senha**" },
-​```
 ```
+
 
 
 
@@ -45,13 +45,17 @@ dotnet run
 
 # End point 
 
-```
-|Verbo HTTP | Endpoint e Parametro|
-|-----------| --------------------|
-GET | https://localhost:5001/api/people/{PersonID}
-```
+
+
+
+| Verbo HTTP  | Endpoint e Parametro   |
+|-----------: | :--------------------: |
+| GET | https://localhost:5001/api/people/{PersonID} |
 
 
 
 
+# Mais
+
+Para de mais detalhes sobre o desenvolvimento visite o post do blog: [#3- API .NET Core + ADO.NET + MariaDB](https://allanbelo.github.io/api.netcore_ado.net_mariadb/).
 
